@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'tasks_provider.dart';
+import 'gallery_page.dart';
 
 class TasksPage extends StatelessWidget {
   const TasksPage({
@@ -79,6 +80,16 @@ class TasksPage extends StatelessWidget {
               Switch(value: isDark, onChanged: (_) => onToggleTheme()),
               const Icon(Icons.dark_mode),
               const SizedBox(width: 8),
+
+              IconButton(
+                tooltip: 'Галерея',
+                icon: const Icon(Icons.photo_library_outlined),
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => const GalleryPage()),
+                  );
+                },
+              ),
             ],
           ),
         ],
