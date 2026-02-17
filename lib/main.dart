@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_home_work/home_work_25/h_w_25.dart';
 import 'package:provider/provider.dart';
 import 'tasks_provider.dart';
 import 'tasks_page.dart';
@@ -22,21 +23,25 @@ class _MyRootAppState extends State<MyRootApp> {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (_) => TasksProvider(),
-      child: MaterialApp(
-        theme: lightTheme,
-        darkTheme: darkTheme,
-        themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
-        home: TasksPage(
-          isDark: isDark,
-          onToggleTheme: () {
-            setState(() {
-              isDark = !isDark;
-            });
-          },
-        ),
-      ),
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: HomeWork25());
   }
 }
+
+
+
+// ChangeNotifierProvider(
+//       create: (_) => TasksProvider(),
+//       child: MaterialApp(
+//         theme: lightTheme,
+//         darkTheme: darkTheme,
+//         themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
+//         home: TasksPage(
+//           isDark: isDark,
+//           onToggleTheme: () {
+//             setState(() {
+//               isDark = !isDark;
+//             });
+//           },
+//         ),
+//       ),
+//     );
