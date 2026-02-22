@@ -1,26 +1,40 @@
-// HOME WORK 30______________________
+// HOME WORK 31______________________
 
 import 'package:flutter/material.dart';
-import 'home_work_30/di/locator.dart';
-import 'home_work_30/h_w_30.dart';
+import 'home_work_31/hw31_app.dart';
 
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized(); // обязательно перед async init
-  await setupLocator(); // async init + DI
-  runApp(const MyApp());
+void main() {
+  runApp(const HomeWork31App());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomeWork30Screen.fromDI(), // фабрика вытаскивает usecase из get_it
-    );
-  }
-}
+
+
+
+// HOME WORK 30______________________
+
+// import 'package:flutter/material.dart';
+// import 'home_work_30/di/locator.dart';
+// import 'home_work_30/h_w_30.dart';
+
+
+// Future<void> main() async {
+//   WidgetsFlutterBinding.ensureInitialized(); // обязательно перед async init
+//   await setupLocator(); // async init + DI
+//   runApp(const MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       home: HomeWork30Screen.fromDI(), // фабрика вытаскивает usecase из get_it
+//     );
+//   }
+// }
 
 
 // HOME WORK 25_____________________
