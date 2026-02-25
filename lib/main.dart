@@ -1,11 +1,34 @@
-// HOME WORK 31______________________
+// HOME WORK 29______________________
 
 import 'package:flutter/material.dart';
-import 'home_work_31/hw31_app.dart';
+import 'home_work_29/h_w_29.dart';
 
 void main() {
-  runApp(const HomeWork31App());
+  runApp(const MyApp());
 }
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HomeWork29(),
+    );
+  }
+}
+
+
+
+// HOME WORK 31______________________
+
+// import 'package:flutter/material.dart';
+// import 'home_work_31/hw31_app.dart';
+
+// void main() {
+//   runApp(const HomeWork31App());
+// }
 
 
 
