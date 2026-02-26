@@ -1,16 +1,29 @@
-// HOME WORK 32______________________
+// HOME WORK 28______________________
 
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
+import 'home_work_28/h_w_28.dart';
 
-import 'firebase_options.dart';
-import 'home_work_32/hw32_app.dart';
-
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(const HomeWork32App());
+void main() {
+  runApp(
+    const MaterialApp(debugShowCheckedModeBanner: false, home: HomeWork28()),
+  );
 }
+
+
+
+// HOME WORK 32______________________
+
+// import 'package:flutter/material.dart';
+// import 'package:firebase_core/firebase_core.dart';
+
+// import 'firebase_options.dart';
+// import 'home_work_32/hw32_app.dart';
+
+// Future<void> main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+//   runApp(const HomeWork32App());
+// }
 
 
 
