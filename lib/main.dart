@@ -1,23 +1,41 @@
-// HOME WORK 29______________________
+// HOME WORK 32______________________
 
 import 'package:flutter/material.dart';
-import 'home_work_29/h_w_29.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'firebase_options.dart';
+import 'home_work_32/hw32_app.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  runApp(const HomeWork32App());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomeWork29(),
-    );
-  }
-}
+
+
+
+// HOME WORK 29______________________
+
+// import 'package:flutter/material.dart';
+// import 'home_work_29/h_w_29.dart';
+
+// void main() {
+//   runApp(const MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return const MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       home: HomeWork29(),
+//     );
+//   }
+// }
 
 
 
