@@ -1,7 +1,7 @@
-// HOME WORK 27______________________
+// HOME WORK 26______________________
 
 import 'package:flutter/material.dart';
-import 'home_work_27/hw27_menu_page.dart';
+import 'home_work_26/hw26_menu_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,12 +14,35 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Homework App',
       theme: ThemeData(useMaterial3: true),
-      home: const HomeWork27MenuPage(), // <-- стартовая на проверку
+      home: const HomeWork26MenuPage(),
     );
   }
 }
+
+
+// HOME WORK 27______________________
+
+// import 'package:flutter/material.dart';
+// import 'home_work_27/hw27_menu_page.dart';
+
+// void main() {
+//   runApp(const MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       title: 'Homework App',
+//       theme: ThemeData(useMaterial3: true),
+//       home: const HomeWork27MenuPage(), // <-- стартовая на проверку
+//     );
+//   }
+// }
 
 
 
