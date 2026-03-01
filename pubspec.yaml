@@ -49,6 +49,7 @@ dependencies:
   flutter_bloc: ^9.1.1
   equatable: ^2.0.8
   lottie: ^3.3.2
+  cloud_firestore: ^6.1.2
 
   # optional:
   google_sign_in: ^7.2.0

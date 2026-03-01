@@ -1,25 +1,40 @@
-// HOME WORK 26______________________
+// HOME WORK 32 + 33 ______________________
 
 import 'package:flutter/material.dart';
-import 'home_work_26/hw26_menu_page.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'firebase_options.dart';
+import 'home_work_32/hw32_app.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  runApp(const HomeWork32App());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(useMaterial3: true),
-      home: const HomeWork26MenuPage(),
-    );
-  }
-}
 
+// HOME WORK 26______________________
+
+// import 'package:flutter/material.dart';
+// import 'home_work_26/hw26_menu_page.dart';
+
+// void main() {
+//   runApp(const MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       theme: ThemeData(useMaterial3: true),
+//       home: const HomeWork26MenuPage(),
+//     );
+//   }
+// }
 
 // HOME WORK 27______________________
 
@@ -44,9 +59,6 @@ class MyApp extends StatelessWidget {
 //   }
 // }
 
-
-
-
 // HOME WORK 28______________________
 
 // import 'package:flutter/material.dart';
@@ -58,9 +70,7 @@ class MyApp extends StatelessWidget {
 //   );
 // }
 
-
-
-// HOME WORK 32______________________
+// HOME WORK 32 + 33 ______________________
 
 // import 'package:flutter/material.dart';
 // import 'package:firebase_core/firebase_core.dart';

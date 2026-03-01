@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 import '../screens/home_screen.dart';
 import '../screens/login_screen.dart';
+import '../screens/tasks_screen.dart';
 import 'auth_service.dart';
 
 class AuthGate extends StatelessWidget {
@@ -26,6 +27,10 @@ class AuthGate extends StatelessWidget {
 
         if (user == null) {
           return LoginScreen(auth: auth);
+        }
+
+        if (snapshot.hasData) {
+          return TasksScreen(); // 🔥 наш новый экран CRUD
         }
 
         return HomeScreen(auth: auth);
