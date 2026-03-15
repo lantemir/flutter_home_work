@@ -45,11 +45,14 @@ dependencies:
   path_provider: ^2.1.4
   firebase_core: ^4.4.0
   firebase_auth: ^6.1.4
+  firebase_messaging: ^16.1.2
+  flutter_local_notifications: ^20.1.0
   dio: ^5.9.1
   flutter_bloc: ^9.1.1
   equatable: ^2.0.8
   lottie: ^3.3.2
   cloud_firestore: ^6.1.2
+  
 
   # optional:
   google_sign_in: ^7.2.0

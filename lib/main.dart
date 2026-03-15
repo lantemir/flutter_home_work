@@ -1,16 +1,46 @@
-// HOME WORK 32 + 33 ______________________
-
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 
 import 'firebase_options.dart';
-import 'home_work_32/hw32_app.dart';
+import 'home_work_34/hw34_app.dart';
+import 'home_work_34/services/local_notification_service.dart';
+
+@pragma('vm:entry-point')
+Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+  debugPrint('BG message: ${message.messageId}');
+  debugPrint('BG data: ${message.data}');
+}
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(const HomeWork32App());
+
+  FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
+
+  await LocalNotificationService.instance.init();
+
+  runApp(const HomeWork34App());
 }
+
+
+
+// HOME WORK 32 + 33 ______________________
+
+// import 'package:flutter/material.dart';
+// import 'package:firebase_core/firebase_core.dart';
+
+// import 'firebase_options.dart';
+// import 'home_work_32/hw32_app.dart';
+
+// Future<void> main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+//   runApp(const HomeWork32App());
+// }
 
 
 
