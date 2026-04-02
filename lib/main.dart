@@ -1,7 +1,7 @@
-// home work 35
+// home work 37
 
 import 'package:flutter/material.dart';
-import 'home_work_35/hw35_menu_page.dart';
+import 'home_work_37/hw37_menu_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,10 +14,32 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeWork35MenuPage(),
+      home: HomeWork37MenuPage(),
     );
   }
 }
+
+
+// home work 35
+
+// import 'package:flutter/material.dart';
+// import 'home_work_35/hw35_menu_page.dart';
+
+// void main() {
+//   runApp(const MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return const MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       home: HomeWork35MenuPage(),
+//     );
+//   }
+// }
 
 // HomeWork 34____________________________
 
