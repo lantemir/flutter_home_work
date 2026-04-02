@@ -59,6 +59,7 @@ class NotificationService {
       final body = message.notification?.body ?? 'No body';
 
       await LocalNotificationService.instance.show(
+        id: 1,
         title: title,
         body: body,
         payload: message.data,

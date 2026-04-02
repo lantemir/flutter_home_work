@@ -32,15 +32,16 @@ class LocalNotificationService {
   }
 
   Future<void> show({
+    required int id,
     required String title,
     required String body,
     required Map<String, dynamic> payload,
   }) async {
     await _plugin.show(
-      1,
-      title,
-      body,
-      const NotificationDetails(
+      id: 1,
+      title: "sdf",
+      body: body,
+      notificationDetails: const NotificationDetails(
         android: AndroidNotificationDetails(
           'hw34_channel',
           'HW34 Notifications',
@@ -51,7 +52,6 @@ class LocalNotificationService {
         iOS: DarwinNotificationDetails(),
       ),
       payload: jsonEncode(payload),
-      id: 1,
     );
   }
 }

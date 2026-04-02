@@ -1,30 +1,53 @@
+// home work 35
+
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
+import 'home_work_35/hw35_menu_page.dart';
 
-import 'firebase_options.dart';
-import 'home_work_34/hw34_app.dart';
-import 'home_work_34/services/local_notification_service.dart';
-
-@pragma('vm:entry-point')
-Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-
-  debugPrint('BG message: ${message.messageId}');
-  debugPrint('BG data: ${message.data}');
+void main() {
+  runApp(const MyApp());
 }
 
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-
-  FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
-
-  await LocalNotificationService.instance.init();
-
-  runApp(const HomeWork34App());
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HomeWork35MenuPage(),
+    );
+  }
 }
+
+// HomeWork 34____________________________
+
+// import 'package:flutter/material.dart';
+// import 'package:firebase_core/firebase_core.dart';
+// import 'package:firebase_messaging/firebase_messaging.dart';
+
+// import 'firebase_options.dart';
+// import 'home_work_34/hw34_app.dart';
+// import 'home_work_34/services/local_notification_service.dart';
+
+// @pragma('vm:entry-point')
+// Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+//   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+//   debugPrint('BG message: ${message.messageId}');
+//   debugPrint('BG data: ${message.data}');
+// }
+
+// Future<void> main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+
+//   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+//   FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
+
+//   await LocalNotificationService.instance.init();
+
+//   runApp(const HomeWork34App());
+// }
 
 
 
